@@ -67,12 +67,12 @@ function operate(lv, rv, op) {
   }
 }
 
-const display = document.getElementById("display")
-const buttons = document.querySelectorAll("button")
+const display = document.getElementById("display");
+const buttons = document.querySelectorAll("button");
 
 buttons.forEach((button) => {
-  button.addEventListener("click", function() {
-    const value = this.dataset.value
-    display.value = value
-  })
-})
+  button.addEventListener("click", function (event) {
+    const value = this.dataset.value;
+    display.value = value;
+  });
+});

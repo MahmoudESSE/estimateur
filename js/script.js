@@ -71,7 +71,7 @@ const display = document.getElementById("display");
 const buttons = document.querySelectorAll("button");
 
 buttons.forEach((button) => {
-  button.addEventListener("click", function (event) {
+  button.addEventListener("click", function () {
     const value = this.dataset.value;
     if (value === "clear") {
       currentValue = "";

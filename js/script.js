@@ -80,6 +80,18 @@ buttons.forEach((button) => {
       display.value = "0";
       return;
     }
+
+    if (value === "backspace") {
+      currentValue = currentValue.slice(0, -1);
+      if (currentValue === "") {
+        display.value = "0";
+        return;
+      }
+
+      display.value = currentValue;
+      return;
+    }
+
     currentValue += value;
     display.value = currentValue;
   });

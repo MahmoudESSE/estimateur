@@ -92,6 +92,16 @@ buttons.forEach((button) => {
       return;
     }
 
+    if (["+", "-", "*", "/"].includes(value)) {
+      if (operator !== "") {
+        currentValue = operate(currentValue, previousValue, operator);
+        display.value = currentValue;
+      }
+      operator = value;
+      previousValue = currentValue;
+      currentValue = "";
+      return;
+    }
     currentValue += value;
     display.value = currentValue;
   });

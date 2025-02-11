@@ -1,67 +1,89 @@
-* {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  background-color: #1e1e2e;
-  width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
 }
 
 .calculator {
-  width: 350px;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 300px;
 }
 
 .display {
-  background-color: #303446;
-  color: #eff1f5;
-  padding: 15px;
-  border-radius: 5px;
-  margin-bottom: 15px;
-  text-align: right;
+  width: 100%;
+  height: 60px;
   font-size: 2em;
-  word-wrap: break-word;
+  text-align: right;
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #eee;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 .buttons {
-  background-color: #24273a;
-  padding: 15px;
-  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 button {
-  padding: 10px;
-  border: none;
-  outline: none;
-  border-radius: 5px;
+  flex: 1 0 calc(33.333% - 10px);
+  padding: 15px;
   font-size: 1.2em;
-  font-weight: bold;
-  background-color: #eff1f5;
-  color: #1e1e2e;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  background-color: #4a4a4a;
+  color: white;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #ffffff;
+  background-color: #5a5a5a;
 }
 
-.operator.clear,
-.operator.delete {
-  background-color: #b7bdf8;
+.clear,
+.delete {
+  background-color: #ff9800;
 }
 
-.operator.clear:hover,
-.operator.delete:hover {
-  background-color: #b4befe;
+.clear:hover,
+.delete:hover {
+  background-color: #ffa726;
 }
 
-.operator.eval {
-  background-color: #d20f39;
+.operators {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.arithmetic {
+  flex: 1 0 calc(50% - 5px);
+  background-color: #2196f3;
+}
+
+.arithmetic:hover {
+  background-color: #42a5f5;
+}
+
+.eval {
+  flex: 1 0 100%;
+  background-color: #4caf50;
+}
+
+.eval:hover {
+  background-color: #66bb6a;
 }
 

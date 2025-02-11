@@ -40,4 +40,16 @@ function divide(lv, rv) {
   return lv / rv;
 }
 
+let currentValue = "";
+let previousValue = "";
+let operator = "";
 
+const display = document.getElementById("display")
+const buttons = document.querySelectorAll("button")
+
+buttons.forEach((button) => {
+  button.addEventListener("click", function() {
+    const value = this.dataset.value
+    display.value = value
+  })
+})

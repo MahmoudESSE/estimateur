@@ -102,6 +102,18 @@ buttons.forEach((button) => {
       currentValue = "";
       return;
     }
+
+    if (value === "=") {
+      if (currentValue && previousValue && operator) {
+        currentValue = operate(currentValue, previousValue, operator);
+        display.value = currentValue;
+        previousValue = "";
+        operator = "";
+        return;
+      }
+      return;
+    }
+
     currentValue += value;
     display.value = currentValue;
   });

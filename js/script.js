@@ -73,6 +73,14 @@ const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
   button.addEventListener("click", function (event) {
     const value = this.dataset.value;
-    display.value = value;
+    if (value === "clear") {
+      currentValue = "";
+      operator = "";
+      previousValue = "";
+      display.value = "0";
+      return;
+    }
+    currentValue += value;
+    display.value = currentValue;
   });
 });
